@@ -18,7 +18,7 @@ public class User {
   private LocalDate birthDate;
   private String password;
   @OneToMany(mappedBy = "client")
-  private List<Order> orders = new ArrayList<>();
+  private final List<Order> orders = new ArrayList<>();
 
   public User() {
   }
