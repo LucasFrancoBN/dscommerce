@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -21,7 +22,7 @@ public class Product {
 
   private Double price;
 
-  private String imageUrl;
+  private String imgUrl;
 
   @ManyToMany
   @JoinTable(name = "tb_product_category",
@@ -40,7 +41,7 @@ public class Product {
     this.name = name;
     this.description = description;
     this.price = price;
-    this.imageUrl = imageUrl;
+    this.imgUrl = imageUrl;
   }
 
   public Long getId() {
@@ -75,12 +76,12 @@ public class Product {
     this.price = price;
   }
 
-  public String getImageUrl() {
-    return imageUrl;
+  public String getImgUrl() {
+    return imgUrl;
   }
 
-  public void setImageUrl(String imaUrl) {
-    this.imageUrl = imaUrl;
+  public void setImgUrl(String imaUrl) {
+    this.imgUrl = imaUrl;
   }
 
   public Set<Category> getCategories() {
@@ -93,5 +94,18 @@ public class Product {
 
   public List<Order> getOrders() {
     return orderItems.stream().map(OrderItem::getOrder).toList();
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Product product = (Product) o;
+    return Objects.equals(id, product.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(id);
   }
 }
