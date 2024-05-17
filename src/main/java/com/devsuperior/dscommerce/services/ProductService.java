@@ -1,7 +1,9 @@
 package com.devsuperior.dscommerce.services;
 
+import com.devsuperior.dscommerce.dto.CategoryDTO;
 import com.devsuperior.dscommerce.dto.ProductDTO;
 import com.devsuperior.dscommerce.dto.ProductMinDTO;
+import com.devsuperior.dscommerce.entities.Category;
 import com.devsuperior.dscommerce.entities.Product;
 import com.devsuperior.dscommerce.repositories.ProductRepository;
 import com.devsuperior.dscommerce.services.exceptions.DatabaseException;
@@ -15,7 +17,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -72,6 +76,8 @@ public class ProductService {
     product.setDescription(productDTO.description());
     product.setPrice(productDTO.price());
     product.setImgUrl(productDTO.imgUrl());
+    product.getCategories().clear();
+    productDTO.categories().forEach(categoryDTO -> product.getCategories().add(new Category(categoryDTO.id(), categoryDTO.name())));
   }
 
   private ProductDTO toDTO(Product product) {
@@ -80,7 +86,8 @@ public class ProductService {
         product.getName(),
         product.getDescription(),
         product.getPrice(),
-        product.getImgUrl()
+        product.getImgUrl(),
+        product.getCategories().stream().map(category -> new CategoryDTO(category.getId(), category.getName())).toList()
     );
   }
 
@@ -94,12 +101,15 @@ public class ProductService {
   }
 
   private Product toProduct(ProductDTO productDTO) {
-    return new Product(
+    Product p =  new Product(
         productDTO.id(),
         productDTO.name(),
         productDTO.description(),
         productDTO.price(),
         productDTO.imgUrl()
+
     );
+    productDTO.categories().forEach(categoryDTO -> p.getCategories().add(new Category(categoryDTO.id(), categoryDTO.name())));
+    return p;
   }
 }

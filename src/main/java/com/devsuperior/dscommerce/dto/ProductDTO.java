@@ -1,8 +1,11 @@
 package com.devsuperior.dscommerce.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
+
+import java.util.List;
 
 public record ProductDTO(
     Long id,
@@ -14,6 +17,8 @@ public record ProductDTO(
     String description,
     @Positive(message = "Price must be positive value")
     Double price,
-    String imgUrl
+    String imgUrl,
+    @NotEmpty(message = "Deve ter pelo menos uma categoria")
+    List<CategoryDTO> categories
 ) {
 }
