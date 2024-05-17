@@ -50,7 +50,7 @@ public class UserService implements UserDetailsService {
     }
   }
 
-  @Transactional
+  @Transactional(readOnly = true)
   public UserDTO getMe() {
     User user = authenticated();
     return toDTO(user);
