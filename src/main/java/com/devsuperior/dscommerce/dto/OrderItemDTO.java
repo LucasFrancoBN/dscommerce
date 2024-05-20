@@ -4,7 +4,8 @@ public record OrderItemDTO(
     Long id,
     String name,
     Double price,
-    Integer quantity
+    Integer quantity,
+    String imgUrl
 ) {
   public Double getSubtotal() {
     return price * quantity;

@@ -121,6 +121,13 @@ public class User implements UserDetails {
     return roles.contains(role);
   }
 
+  public boolean hasRole(String roleName) {
+    for (Role role : roles) {
+      if(role.getAuthority().equals(roleName)) { return true; }
+    }
+    return false;
+  }
+
   public void setPassword(String password) {
     this.password = password;
   }
