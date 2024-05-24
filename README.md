@@ -11,6 +11,7 @@
 </div>
 
 <h2 id="visao">Visão geral do sistema</h2>
+
 O sistema deve manter um cadastro de usuário, produtos e suas categorias. Cada
 usuário possui nome, email, telefone, data de nascimento e uma senha de acesso. Os
 dados dos produtos são: nome, descrição, preço e imagem. O sistema deve apresentar
@@ -31,6 +32,7 @@ seus próprios pedidos. Usuários administradores tem acesso à área administra
 pode acessar os cadastros de usuários, produtos e categorias.
 
 <h2 id="modelo">Modelo Conceitual</h2>
+
 - Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma
   quantidade. Sendo que o preço também é armazenado no item de pedido por
   questões de histórico (se o preço do produto mudar no futuro, o preço do item de
@@ -65,6 +67,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 | Admin | Responsável por acessar a área administrativa do sistema com cadastros e relatórios. Admin também pode fazer tudo que Cliente faz.                             |
 
 <h2 id="detalhamento">Casos de uso (detalhamento)</h2>
+
 ### Consultar catálogo
 | Atores       | Usuário anônimo, Cliente, Admin                                  |
 |--------------|------------------------------------------------------------------|
@@ -149,6 +152,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 | [1] Dados do carrinho de compras: vide caso de uso Gerenciar carrinho. | 
 
 <h2 id="tec">Tecnologias utilizadas</h2>
+
 As seguintes tecnologias foram utilizadas durante o desenvolvimento do sistema:
 - Java 21
 - Spring Boot
