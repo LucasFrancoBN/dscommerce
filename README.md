@@ -58,8 +58,9 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 | Visualizar pedidos | Visualizar os pedidos que o próprio usuário já fez                                                      | Usuário logado |
 | Registrar pagamento | Salvar no sistema os dados do pagamento de um pedido                                                    | Usuário logado |
 | Reportar pedidos | Relatório de pedidos, podendo ser filtrados por data                                                    | Somente Admin |
-![Atores](/img/atores.png)
+
 ### Atores
+![Atores](/img/atores.png)
 | Ator | Responsabilidade                                                                                                                                               |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Usuário anônimo | Pode realizar casos de uso das áreas públicas do sistema, como catálogo, carrinho de compras, login e sign up.                                                 |
