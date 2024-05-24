@@ -2,15 +2,15 @@
 
 <div align="center">
  <h2> Sumário</h2>
-  <a href="#visao-geral-do-sistema">Visão geral do sistema</a> -
-  <a href="#modelo-conceitual">Modelo conceitual</a> - 
-  <a href="#casos-de-uso-visao-geral">Casos de uso (visão geral)</a> - 
+  <a href="#visao">Visão geral do sistema</a> -
+  <a href="#modelo">Modelo conceitual</a> - 
+  <a href="#geral">Casos de uso (visão geral)</a> - 
   <a href="#detalhamento">Casos de uso (detalhamento)</a> -
   <a href="#tec">Tecnologias utilizadas</a> -
   <a href="#uso">Instruções de uso</a>
 </div>
 
-## Visão geral do sistema
+<h2 id="visao">Visão geral do sistema</h2>
 O sistema deve manter um cadastro de usuário, produtos e suas categorias. Cada
 usuário possui nome, email, telefone, data de nascimento e uma senha de acesso. Os
 dados dos produtos são: nome, descrição, preço e imagem. O sistema deve apresentar
@@ -30,7 +30,7 @@ compras. Clientes podem atualizar seu cadastro no sistema, registrar pedidos e v
 seus próprios pedidos. Usuários administradores tem acesso à área administrativa onde
 pode acessar os cadastros de usuários, produtos e categorias.
 
-## Modelo Conceitual
+<h2 id="modelo">Modelo Conceitual</h2>
 - Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma
   quantidade. Sendo que o preço também é armazenado no item de pedido por
   questões de histórico (se o preço do produto mudar no futuro, o preço do item de
@@ -39,7 +39,7 @@ pode acessar os cadastros de usuários, produtos e categorias.
   no sistema (client, admin).
   ![Modelo-conceitual](/img/modelo-conceitual.png)
 
-## Casos de uso visão geral
+<h2 id="geral">Casos de uso (visão geral)</h2>
 O escopo funcional do sistema consiste nos seguintes casos de uso:
 
 | Caso de uso | Visão geral                                                                                             | Acesso |
@@ -64,7 +64,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 | Cliente | Responsável por manter seu próprios dados pessoais no sistema, e pode visualizar histórico dos seus pedidos. Todo usuário  cadastrado por padrão é um Cliente. | 
 | Admin | Responsável por acessar a área administrativa do sistema com cadastros e relatórios. Admin também pode fazer tudo que Cliente faz.                             |
 
-## Casos de uso detalhamento
+<h2 id="detalhamento">Casos de uso (detalhamento)</h2>
 ### Consultar catálogo
 | Atores       | Usuário anônimo, Cliente, Admin                                  |
 |--------------|------------------------------------------------------------------|
@@ -148,7 +148,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 |-------------------------------------------------------------------------------------------------------------------------------|
 | [1] Dados do carrinho de compras: vide caso de uso Gerenciar carrinho. | 
 
-## Tecnologias utilizadas
+<h2 id="tec">Tecnologias utilizadas</h2>
 As seguintes tecnologias foram utilizadas durante o desenvolvimento do sistema:
 - Java 21
 - Spring Boot
@@ -158,7 +158,7 @@ As seguintes tecnologias foram utilizadas durante o desenvolvimento do sistema:
 - Spring Security
 - Maven
 
-## Instruções de Uso
+<h2 id="uso">Instruções de Uso</h2>
 Para prosseguir com o passo a passo, é necessário que você tenha em sua máquina o Java 21, git e Intellij.
 
 ### Instalação
