@@ -6,7 +6,7 @@
   <a href="#modelo-conceitual">Modelo conceitual</a> - 
   <a href="#caso-de-uso-geral">Casos de uso (visão geral)</a> - 
   <a href="#caso-de-uso-detalhamento">Casos de uso (detalhamento)</a> -
-  <a href="#tec">Tecnologias utilizadas</a>
+  <a href="#tec">Tecnologias utilizadas</a> -
   <a href="#inst-uso">Instruções de uso</a>
 </div>
 
