@@ -4,10 +4,10 @@
  <h2> Sumário</h2>
   <a href="#visao">Visão geral do sistema</a> -
   <a href="#modelo-conceitual">Modelo conceitual</a> - 
-  <a href="#caso-de-uso-geral">Casos de uso (visão geral)</a> - 
-  <a href="#caso-de-uso-detalhamento">Casos de uso (detalhamento)</a> -
+  <a href="#geral">Casos de uso (visão geral)</a> - 
+  <a href="#detalhamento">Casos de uso (detalhamento)</a> -
   <a href="#tec">Tecnologias utilizadas</a> -
-  <a href="#inst-uso">Instruções de uso</a>
+  <a href="#uso">Instruções de uso</a>
 </div>
 
 ## [Visão](visao)
@@ -39,7 +39,7 @@ pode acessar os cadastros de usuários, produtos e categorias.
   no sistema (client, admin).
   ![Modelo-conceitual](/img/modelo-conceitual.png)
 
-## [Casos de uso (visão geral)](caso-de-uso-geral)
+## [Casos de uso (visão geral)](geral)
 O escopo funcional do sistema consiste nos seguintes casos de uso:
 
 | Caso de uso | Visão geral                                                                                             | Acesso |
@@ -64,7 +64,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 | Cliente | Responsável por manter seu próprios dados pessoais no sistema, e pode visualizar histórico dos seus pedidos. Todo usuário  cadastrado por padrão é um Cliente. | 
 | Admin | Responsável por acessar a área administrativa do sistema com cadastros e relatórios. Admin também pode fazer tudo que Cliente faz.                             |
 
-## [Casos de uso (detalhamento)](caso-de-uso-detalhamento)
+## [Casos de uso (detalhamento)](detalhamento)
 ### Consultar catálogo
 | Atores       | Usuário anônimo, Cliente, Admin                                  |
 |--------------|------------------------------------------------------------------|
@@ -148,7 +148,7 @@ O escopo funcional do sistema consiste nos seguintes casos de uso:
 |-------------------------------------------------------------------------------------------------------------------------------|
 | [1] Dados do carrinho de compras: vide caso de uso Gerenciar carrinho. | 
 
-## [Tecnologias utilizadas](tecnologias-utilizadas)
+## [Tecnologias utilizadas](tec)
 As seguintes tecnologias foram utilizadas durante o desenvolvimento do sistema:
 - Java 21
 - Spring Boot
@@ -158,7 +158,7 @@ As seguintes tecnologias foram utilizadas durante o desenvolvimento do sistema:
 - Spring Security
 - Maven
 
-## [Instruções de Uso](inst-uso)
+## [Instruções de Uso](uso)
 Para prosseguir com o passo a passo, é necessário que você tenha em sua máquina o Java 21, git e Intellij.
 
 ### Instalação
